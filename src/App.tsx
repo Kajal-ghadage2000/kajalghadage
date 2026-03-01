@@ -31,8 +31,8 @@ function App() {
                 title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
             >
                 <div className="relative w-5 h-5">
-                    <FiMoon className={`absolute inset-0 w-5 h-5 text-[var(--accent)] transition-all duration-700 cubic-bezier(0.4, 0, 0.2, 1) transform ${isDarkMode ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-180 scale-0'}`} />
-                    <FiSun className={`absolute inset-0 w-5 h-5 text-[var(--accent)] transition-all duration-700 cubic-bezier(0.4, 0, 0.2, 1) transform ${isDarkMode ? 'opacity-0 rotate-180 scale-0' : 'opacity-100 rotate-0 scale-100'}`} />
+                    <FiSun className={`absolute inset-0 w-5 h-5 text-[var(--accent)] transition-all duration-700 cubic-bezier(0.4, 0, 0.2, 1) transform ${isDarkMode ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-180 scale-0'}`} />
+                    <FiMoon className={`absolute inset-0 w-5 h-5 text-[var(--accent)] transition-all duration-700 cubic-bezier(0.4, 0, 0.2, 1) transform ${isDarkMode ? 'opacity-0 rotate-180 scale-0' : 'opacity-100 rotate-0 scale-100'}`} />
                 </div>
             </button>
 
