@@ -15,7 +15,7 @@ function App() {
             {/* Theme Toggle Button */}
             <button
                 onClick={toggleTheme}
-                className="fixed top-6 right-6 md:top-8 md:right-12 z-50 p-3 bg-transparent backdrop-blur-md transition-all hover:scale-110 group flex items-center justify-center w-12 h-12"
+                className="fixed top-1 right-1 md:top-8 md:right-12 z-50 p-3 bg-transparent backdrop-blur-md transition-all hover:scale-110 group flex items-center justify-center w-12 h-12"
                 title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
             >
                 <div className="relative w-5 h-5">
