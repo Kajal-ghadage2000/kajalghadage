@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useLayoutEffect } from 'react';
 
 declare global {
     interface Window {
@@ -11,6 +11,7 @@ export const useTheme = () => {
         if (typeof window !== 'undefined') {
             const saved = localStorage.getItem('theme');
             if (saved) return saved === 'dark';
+            // Default to dark mode as requested
             return true;
         }
         return true;
@@ -39,7 +40,7 @@ export const useTheme = () => {
         }
     };
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (!isDarkMode) {
             document.documentElement.classList.add('light');
         } else {
