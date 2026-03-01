@@ -62,9 +62,9 @@
   --border-muted: rgba(15, 23, 42, 0.1);
 }
 
+/* Remove global * transition to prevent flickering and performance issues */
 * {
-  /* Apply transition to all elements as per example */
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: none;
 }
 
 @utility no-scrollbar {
@@ -117,10 +117,11 @@
 @layer base {
   body {
     color: var(--text-secondary);
+    background-color: var(--bg-gradient-end);
+    /* Solid fallback */
     @apply font-sans leading-relaxed min-h-screen relative;
-    background: radial-gradient(circle at 50% 0%, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%) no-repeat fixed;
-    /* Transition background explicitly */
-    transition: background 0.3s ease, color 0.3s ease;
+    /* Move radial gradient to a separate fixed div in App.tsx for mobile stability */
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   h1,
@@ -149,14 +150,6 @@
     color: var(--accent) !important;
   }
 
-  /* Subtle noise texture */
-  body::before {
-    content: "";
-    opacity: var(--noise-opacity);
-    @apply fixed inset-0 pointer-events-none z-[-1];
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    transition: opacity 0.3s ease;
-  }
 }
 
 @keyframes shake {
