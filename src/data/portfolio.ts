@@ -71,7 +71,7 @@ export const portfolioData: PortfolioData = {
             link: "https://github.com/disha2000/AI-Based-Voice-Prescription-",
             description: "A healthcare web application that writes prescriptions based on dictation from doctors. A Natural Language Processing model is trained on the Harvard Medical School EHR dataset to generate structured digital prescriptions from raw transcripts.",
             tech: ['React', 'Node', 'Express', 'MongoDB', 'NLP', 'Python', 'JWT'],
-            image: "src/assets/voice-prescription.png"
+            image: "/assets/voice-prescription.png"
         }
     ],
     skills: [
@@ -81,9 +81,9 @@ export const portfolioData: PortfolioData = {
         { icon: '⚡', title: 'Performance, Testing & Tools', desc: 'Code Splitting, Lazy Loading, Memoization, WCAG Standards, Jest, Git, GitHub, Vercel, Netlify, Webpack, Figma' }
     ],
     recognition: [
-        { year: '2025', title: 'React Frontend Developer Certificate', img: 'src/assets/React.png', link: 'https://www.hackerrank.com/certificates/iframe/b9781c8d7e08' },
-        { year: '2022', title: 'Excellence award for passion & customer service - Bitwise', img: 'src/assets/bitwise.jpg', link: 'https://drive.google.com/file/d/1BBf8z1wXNI7RDSkzxGOXrqKpCuV5rakD/view' },
-        { year: '2021', title: 'Research Publication: Voice Based Prescription Generation using AI', img: 'src/assets/Publication.png', link: 'https://www.irjet.net/archives/V8/i6/IRJET-V8I6217.pdf' }
+        { year: '2025', title: 'React Frontend Developer Certificate', img: '/assets/React.png', link: 'https://www.hackerrank.com/certificates/iframe/b9781c8d7e08' },
+        { year: '2022', title: 'Excellence award for passion & customer service - Bitwise', img: '/assets/bitwise.jpg', link: 'https://drive.google.com/file/d/1BBf8z1wXNI7RDSkzxGOXrqKpCuV5rakD/view' },
+        { year: '2021', title: 'Research Publication: Voice Based Prescription Generation using AI', img: '/assets/Publication.png', link: 'https://www.irjet.net/archives/V8/i6/IRJET-V8I6217.pdf' }
     ],
     footer: {
         tagline: "Built with obsession for detail",
