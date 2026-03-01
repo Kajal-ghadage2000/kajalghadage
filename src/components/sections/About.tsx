@@ -10,9 +10,11 @@ export default function About({ paragraphs }: AboutProps) {
             <SectionHeader title="About" />
             <div>
                 {paragraphs.map((p, i) => (
-                    <p key={i} className={i === paragraphs.length - 1 ? "" : "mb-4"}>
-                        {p}
-                    </p>
+                    <p
+                        key={i}
+                        className={i === paragraphs.length - 1 ? "leading-relaxed" : "mb-4 leading-relaxed text-[var(--text-muted)]"}
+                        dangerouslySetInnerHTML={{ __html: p }}
+                    />
                 ))}
             </div>
         </section>
