@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kajal Ghadage - Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', Arial, Helvetica, sans-serif;
+      color: #1a1a1a;
+      background: #f0f0f0;
+      line-height: 1.5;
+      font-size: 11px;
+    }
+
+    .page {
+      width: 794px;
+      min-height: 1123px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 36px 44px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 16px;
+      border-bottom: 2.5px solid #1a73a7;
+      padding-bottom: 12px;
+    }
+
+    .header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      color: #1a73a7;
+    }
+
+    .header .contact {
+      font-size: 10.5px;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    .header .contact a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .header .contact .sep {
+      margin: 0 4px;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 2px solid #1a73a7;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+      color: #1a73a7;
+    }
+
+    /* Job Block */
+    .job {
+      margin-bottom: 12px;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .job-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .job-date {
+      font-size: 10.5px;
+      color: #444;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .job-company {
+      font-size: 10.5px;
+      color: #444;
+      margin-bottom: 5px;
+      font-style: italic;
+    }
+
+    /* Points with sub-points */
+    .points {
+      padding-left: 16px;
+    }
+
+    .points>li {
+      margin-bottom: 4px;
+      font-size: 10.8px;
+      line-height: 1.5;
+    }
+
+    .points>li::marker {
+      color: #1a1a1a;
+    }
+
+    .main-point {
+      font-weight: 600;
+      color: #1a73a7;
+      margin-bottom: 2px;
+      font-size: 10.8px;
+    }
+
+    .sub-points {
+      padding-left: 16px;
+      list-style-type: disc;
+      margin-top: 2px;
+    }
+
+    .sub-points li {
+      margin-bottom: 2px;
+      font-size: 10.5px;
+      line-height: 1.45;
+      font-weight: 400;
+      color: #2a2a2a;
+    }
+
+    .sub-points li::marker {
+      font-size: 8px;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      row-gap: 4px;
+      font-size: 10.8px;
+    }
+
+    .skill-label {
+      font-weight: 600;
+      color: #1a73a7;
+    }
+
+    .skill-value {
+      color: #2a2a2a;
+    }
+
+    /* Education */
+    .edu {
+      margin-bottom: 6px;
+    }
+
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .edu-degree {
+      font-weight: 700;
+      font-size: 11px;
+    }
+
+    .edu-year {
+      font-size: 10.5px;
+      color: #444;
+      font-weight: 600;
+    }
+
+    .edu-school {
+      font-size: 10.5px;
+      color: #444;
+    }
+
+    /* Projects */
+    .project {
+      margin-bottom: 8px;
+    }
+
+    .project-title {
+      font-weight: 700;
+      font-size: 11px;
+    }
+
+    .project-tech {
+      font-size: 10px;
+      color: #555;
+      margin-bottom: 3px;
+    }
+
+    /* Achievements */
+    .achievements li {
+      margin-bottom: 3px;
+      font-size: 10.8px;
+    }
+
+    b,
+    strong {
+      font-weight: 600;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        box-shadow: none;
+        margin: 0;
+        padding: 30px 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>Kajal Ghadage</h1>
+      <div class="contact">
+        Pune, India | Open to Relocation<br>
+
+        <a href="mailto:kajalsghadage@email.com">kajalsghadage@email.com</a> <span class="sep">|</span>
+        <a href="https://www.linkedin.com/in/kajal-ghadage">linkedin.com/in/kajal-ghadage</a> <span class="sep">|</span>
+        <a href="https://github.com/Kajal-ghadage2000">github.com/Kajal-ghadage2000</a>
+      </div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="section">
+      <div class="section-title">Professional Summary</div>
+      <p style="font-size:10.8px; line-height:1.6; color:#2a2a2a;">
+        Senior Frontend Engineer with 4+ years of experience building scalable, high-performance web applications.
+        Proven expertise in performance optimization, accessibility, advanced UI customization features, and
+        cross-functional product development. Delivered measurable impact: 33% faster load times and 150+ security
+        vulnerabilities resolved. Passionate about clean code and building inclusive digital products.
+      </p>
+    </div>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <div class="section">
+      <div class="section-title">Professional Experience</div>
+
+      <!-- Job 1 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Senior Frontend Developer — Testlify.com (SaaS Product)</span>
+          <span class="job-date">Nov 2023 – Present</span>
+        </div>
+        <div class="job-company">HNR Tech Pvt. Ltd. | Remote</div>
+        <ul class="points">
+          <li>
+            <div class="main-point">Feature Development & Product Impact</div>
+            <ul class="sub-points">
+              <li>Contributed to a <strong>React and TypeScript</strong> based SaaS talent assessment platform
+                supporting multiple languages for international users.</li>
+              <li>Developed advanced <strong>question customization features</strong> with image upload support used on
+                ~75% of pages, driving a <strong>30% increase in client plan upgrades</strong>.</li>
+              <li>Engineered <strong>cross-platform redirection flow</strong> to improve user continuity and reduce
+                drop-offs.</li>
+              <li>Developed <strong>infinite scrolling</strong> with paginated API requests for smoother, more engaging
+                user interaction.</li>
+            </ul>
+          </li>
+          <li>
+            <div class="main-point">Performance Optimization</div>
+            <ul class="sub-points">
+              <li><strong>Improved API handling</strong>, reducing page load time from <strong>3s to 2s</strong> (33%
+                faster).</li>
+              <li>Applied <strong>code splitting and lazy loading</strong> strategies to optimize bundle size and
+                rendering performance.</li>
+            </ul>
+          </li>
+          <li>
+            <div class="main-point">Code Quality, Security & Accessibility</div>
+            <ul class="sub-points">
+              <li>Led the <strong>upgrade of outdated NPM packages</strong>, reducing dependency security
+                vulnerabilities from <strong>160 to 10</strong>, enhancing security, stability, and compliance.</li>
+              <li>Streamlined central business logic and removed ~500 lines of repetitive code, reducing future
+                update-related errors.</li>
+              <li><strong>Fixed 100+ production defects</strong> and resolved 30+ critical issues, improving platform
+                stability and UX.</li>
+              <li>Implemented <strong>accessibility improvements</strong> based on <strong>WCAG standards</strong> to
+                ensure inclusive assessment experiences.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Job 2 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Frontend Developer — Appforest (Atlassian Marketplace Product)</span>
+          <span class="job-date">Oct 2024 – Apr 2025</span>
+        </div>
+        <div class="job-company">HNR Tech Pvt. Ltd. | Remote</div>
+        <ul class="points">
+          <li>
+            <div class="main-point">Plugin Development & Integration</div>
+            <ul class="sub-points">
+              <li>Designed and built an enterprise-level <strong>Jira time-tracking plugin</strong> using
+                <strong>Vue.js, Vuex, Pinia, and TypeScript</strong> for the Atlassian Marketplace.</li>
+              <li>Integrated <strong>Google Calendar API</strong> to suggest relevant Jira tickets for meeting-related
+                time entries, improving workflow automation and logging accuracy.</li>
+            </ul>
+          </li>
+          <li>
+            <div class="main-point">Performance & UI Architecture</div>
+            <ul class="sub-points">
+              <li>Implemented <strong>skeleton-loading states</strong> and optimized asynchronous data handling to
+                improve perceived performance and ensure a smooth UX in data-heavy interfaces.</li>
+              <li>Created <strong>scalable, reusable UI component systems</strong> — including dynamic worklog table,
+                advanced filtering engine, and configurable date-picker — ensuring consistency and <strong>speeding up
+                  feature delivery by 40%</strong>.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Job 3 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Full Stack Developer — Phlox (Client Service)</span>
+          <span class="job-date">Dec 2022 – Present</span>
+        </div>
+        <div class="job-company">HNR Tech Pvt. Ltd. | Mumbai</div>
+        <ul class="points">
+          <li>
+            <div class="main-point">Full Stack Development</div>
+            <ul class="sub-points">
+              <li>Led <strong>end-to-end development</strong> of admin and user dashboards using <strong>ReactJS,
+                  Next.js, Node.js, Express.js, and PostgreSQL</strong> for a seamless interactive experience.</li>
+              <li>Designed <strong>dynamic email and SMS templates</strong> with user preference storage mechanisms to
+                improve communication and session continuity.</li>
+              <li>Maintained and optimized <strong>background schedulers</strong> for reliable system operations.</li>
+            </ul>
+          </li>
+          <li>
+            <div class="main-point">API, Database & Deployment</div>
+            <ul class="sub-points">
+              <li><strong>Managed APIs and PostgreSQL databases</strong>, handled complex integrations and resolved
+                critical issues using strong problem-solving skills.</li>
+              <li>Collaborated with the team to maintain high-quality development through <strong>code reviews, unit
+                  tests, and deployment best practices on Netlify</strong>.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Job 4 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Programmer — ETL Developer</span>
+          <span class="job-date">Jul 2021 – Dec 2022</span>
+        </div>
+        <div class="job-company">Bitwise Solutions Pvt. Ltd. | Pune</div>
+        <ul class="points">
+          <li>
+            <div class="main-point">Data Engineering & Automation</div>
+            <ul class="sub-points">
+              <li>Contributed to customer campaign management for <strong>Discover Financial Services</strong>,
+                supporting large-scale financial operations for ~20 million customers.</li>
+              <li>Created <strong>ETL applications and shell scripts</strong> to automate repetitive tasks, increasing
+                workflow efficiency and reducing manual effort.</li>
+              <li>Received <strong>Excellence Award</strong> from the client for delivering high-quality solutions.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TECHNICAL SKILLS -->
+    <div class="section">
+      <div class="section-title">Technical Skills</div>
+      <div class="skills-grid">
+        <span class="skill-label">Frontend</span>
+        <span class="skill-value">React.js, Vue.js, Next.js, JavaScript (ES6+), TypeScript</span>
+        <span class="skill-label">UI / Libraries</span>
+        <span class="skill-value">Material-UI, Ant Design, Element Plus, Tailwind CSS, Bootstrap</span>
+        <span class="skill-label">State Management</span>
+        <span class="skill-value">Redux Toolkit, Context API, Vuex, Pinia</span>
+        <span class="skill-label">Backend</span>
+        <span class="skill-value">Node.js, Express.js, RESTful APIs</span>
+        <span class="skill-label">Database</span>
+        <span class="skill-value">PostgreSQL, MongoDB</span>
+        <span class="skill-label">Testing</span>
+        <span class="skill-value">Jest, React Testing Library</span>
+        <span class="skill-label">Performance</span>
+        <span class="skill-value">Code Splitting, Lazy Loading, Performance Optimization</span>
+        <span class="skill-label">Accessibility</span>
+        <span class="skill-value">WCAG Standards</span>
+        <span class="skill-label">Tools</span>
+        <span class="skill-value">Git, GitHub, VS Code, Postman, Netlify, Jira</span>
+        <span class="skill-label">Methodologies</span>
+        <span class="skill-value">Agile (Scrum), Daily Stand-ups, Code Reviews</span>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section">
+      <div class="section-title">Projects</div>
+      <div class="project">
+        <div class="project-title">Voice Prescription Generation using AI</div>
+        <div class="project-tech">React.js, Node.js, Deep Learning, MongoDB, FastAPI, Speech-to-Text API, NLP</div>
+        <ul class="points">
+          <li>Developed a healthcare web application that converts doctor's voice dictation into structured digital
+            prescriptions.</li>
+          <li>Integrated <strong>Google Speech-to-Text API</strong> with a Bi-LSTM + CRF NLP model trained on the
+            <strong>Harvard Medical School EHR dataset</strong> to generate accurate prescriptions.</li>
+          <li>Published research paper: <em>IRJET-V8I6217</em></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="edu">
+        <div class="edu-header">
+          <span class="edu-degree">Bachelor of Engineering — Computer Engineering</span>
+          <span class="edu-year">2021 | CGPA: 9.10/10</span>
+        </div>
+        <div class="edu-school">Savitribai Phule Pune University</div>
+      </div>
+      <div class="edu">
+        <div class="edu-header">
+          <span class="edu-degree">Diploma in Computer Engineering</span>
+          <span class="edu-year">2018 | 80%</span>
+        </div>
+        <div class="edu-school">Government Polytechnic Pune</div>
+      </div>
+    </div>
+
+    <!-- ACHIEVEMENTS -->
+    <div class="section">
+      <div class="section-title">Achievements & Certifications</div>
+      <ul class="points achievements">
+        <li><strong>Excellence Award</strong> for passion and customer service — Bitwise Solutions, Apr 2022</li>
+        <li>Secured <strong>Global Rank 2347 (Round 2)</strong> in TCS CodeVita — Feb 2021</li>
+        <li><strong>React Certification</strong> — NamasteDev</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+
+</html>

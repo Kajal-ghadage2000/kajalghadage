@@ -1,0 +1,186 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@property --bg-gradient-start {
+  syntax: '<color>';
+  initial-value: #111827;
+  inherits: true;
+}
+
+@property --bg-gradient-end {
+  syntax: '<color>';
+  initial-value: #000000;
+  inherits: true;
+}
+
+:root {
+  --bg-gradient-start: #111827;
+  --bg-gradient-end: #000000;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent: #5eead4;
+  --accent-muted: rgba(94, 234, 212, 0.1);
+  --nav-indicator: #475569;
+  --nav-indicator-active: #e2e8f0;
+  --noise-opacity: 0.03;
+
+  /* Semantic tokens */
+  --card-bg: transparent;
+  --card-hover-bg: rgba(30, 41, 59, 0.5);
+  /* slate-800/50 */
+  --header-bg: rgba(18, 18, 18, 0.75);
+  --tag-bg: rgba(94, 234, 212, 0.1);
+  --tag-text: #5eead4;
+  /* teal-300 */
+
+  /* Global transition settings from example */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root.light {
+  --bg-gradient-start: #f8fafc;
+  --bg-gradient-end: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --accent: #0d9488;
+  --accent-muted: rgba(13, 148, 136, 0.1);
+  --nav-indicator: #cbd5e1;
+  --nav-indicator-active: #0f172a;
+  --noise-opacity: 0.01;
+
+  /* Semantic tokens for light mode */
+  --card-bg: transparent;
+  --card-hover-bg: rgba(226, 232, 240, 0.5);
+  /* slate-200/50 */
+  --header-bg: rgba(248, 250, 252, 0.75);
+  --tag-bg: rgba(13, 148, 136, 0.1);
+  --tag-text: #0d9488;
+  /* teal-600 */
+  --thumbnail-border: rgba(15, 23, 42, 0.1);
+  --border-muted: rgba(15, 23, 42, 0.1);
+}
+
+* {
+  /* Apply transition to all elements as per example */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+@utility no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@layer components {
+  .nav-link.active .nav-text {
+    color: var(--text-primary);
+    @apply font-bold transition-colors duration-100;
+  }
+
+  .nav-text {
+    @apply relative py-1;
+  }
+
+  /* Left-to-right underline animation */
+  .nav-text::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-px w-0 bg-current transition-all duration-300 ease-out;
+    background-color: var(--accent);
+  }
+
+  .nav-link:hover .nav-text::after,
+  .nav-link.active .nav-text::after {
+    @apply w-full;
+  }
+
+  .nav-indicator {
+    background-color: var(--nav-indicator);
+    @apply mr-4 h-px w-8 transition-all group-hover:w-16 group-focus-visible:w-16;
+  }
+
+  .group:hover .nav-indicator,
+  .group:focus-visible .nav-indicator {
+    background-color: var(--nav-indicator-active);
+  }
+
+  .nav-link.active .nav-indicator {
+    @apply w-16;
+    background-color: var(--nav-indicator-active);
+  }
+}
+
+@layer base {
+  body {
+    color: var(--text-secondary);
+    @apply font-sans leading-relaxed min-h-screen relative;
+    background: radial-gradient(circle at 50% 0%, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%) no-repeat fixed;
+    /* Transition background explicitly */
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  h1,
+  h2,
+  h3,
+  .text-slate-200 {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+  }
+
+  .selection\:bg-teal-300\/30::selection {
+    background-color: var(--accent-muted);
+    color: var(--accent);
+  }
+
+  /* Redefine slate colors to follow variables for better theme support */
+  .text-slate-400 {
+    color: var(--text-secondary);
+  }
+
+  .text-slate-500 {
+    color: var(--text-muted);
+  }
+
+  .hover\:text-teal-300:hover {
+    color: var(--accent) !important;
+  }
+
+  /* Subtle noise texture */
+  body::before {
+    content: "";
+    opacity: var(--noise-opacity);
+    @apply fixed inset-0 pointer-events-none z-[-1];
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    transition: opacity 0.3s ease;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-2px);
+  }
+
+  50% {
+    transform: translateX(2px);
+  }
+
+  75% {
+    transform: translateX(-2px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake-on-hover:hover svg {
+  animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
